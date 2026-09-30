@@ -1,0 +1,22 @@
+{
+  "pageTitle": "Скидка 20% на ТО | CapService",
+  "label": "Специальное предложение",
+  "title": "Скидка 20% на ТО",
+  "body": "Здесь вы редактируете текст акции: какие работы входят в ТО, срок действия скидки 20%, условия записи и ограничения. Фото кладите в папку assets/ этой акции.",
+  "image": "assets/cover.png",
+  "homeCard": {
+    "date": "до 31 января 2026",
+    "title": "Скидка 20% на ТО",
+    "description": "При комплексном техническом обслуживании",
+    "image": "assets/cover.png",
+    "detailPage": "pages/offer-to-20.html"
+  },
+  "primaryButton": {
+    "text": "Назад к предложениям",
+    "href": "../index.html#offers"
+  },
+  "secondaryButton": {
+    "text": "Связаться с менеджером",
+    "href": "../index.html#clients"
+  }
+}

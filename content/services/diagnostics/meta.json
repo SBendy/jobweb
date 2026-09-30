@@ -1,0 +1,17 @@
+{
+  "pageTitle": "Диагностика | CapService",
+  "label": "Услуги",
+  "title": "Диагностика",
+  "description": "Компьютерная диагностика и выявление неисправностей",
+  "body": "Компьютерная диагностика двигателя, АКПП, ABS, SRS и кузовной электроники. Считываем коды ошибок, проверяем параметры в режиме реального времени и составляем понятный отчёт с рекомендациями по ремонту.",
+  "image": "assets/cover.png",
+  "detailPage": "pages/service-diagnostics.html",
+  "primaryButton": {
+    "text": "Назад к услугам",
+    "href": "../index.html#services"
+  },
+  "secondaryButton": {
+    "text": "Контакты",
+    "href": "../index.html#clients"
+  }
+}

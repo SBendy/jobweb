@@ -1,0 +1,22 @@
+{
+  "pageTitle": "Лидерство в рейтинге качества | CapService",
+  "label": "Новости",
+  "title": "CapService подтвердил лидерство в рейтинге качества сервиса",
+  "date": "16 января 2026",
+  "body": "Здесь полный текст новости: методология рейтинга, позиция CapService, цитаты руководства. Фотографию меняйте в папке assets/ этой новости (см. поле image).",
+  "image": "assets/cover.png",
+  "homeCard": {
+    "date": "16 января 2026",
+    "title": "CapService подтвердил лидерство в рейтинге качества сервиса",
+    "image": "assets/cover.png",
+    "detailPage": "pages/news-service-quality-leadership.html"
+  },
+  "primaryButton": {
+    "text": "Назад к новостям",
+    "href": "../index.html#about"
+  },
+  "secondaryButton": {
+    "text": "Контакты",
+    "href": "../index.html#clients"
+  }
+}

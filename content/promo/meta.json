@@ -1,0 +1,7 @@
+{
+  "title": "Скидка 20% на ТО",
+  "image": "assets/cover.png",
+  "detailPage": "pages/offer-to-20.html",
+  "showDelayMs": 3000,
+  "alt": "Специальное предложение CapService"
+}

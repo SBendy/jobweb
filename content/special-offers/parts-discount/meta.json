@@ -1,0 +1,22 @@
+{
+  "pageTitle": "Скидка на запчасти | CapService",
+  "label": "Специальное предложение",
+  "title": "Скидка на запчасти",
+  "body": "Опишите категории запчастей, размер скидки, бренды и сроки акции. Фото — в assets/.",
+  "image": "assets/cover.png",
+  "homeCard": {
+    "date": "до 31 января 2026",
+    "title": "Скидка на запчасти",
+    "description": "При покупке оригинальных запчастей",
+    "image": "assets/cover.png",
+    "detailPage": "pages/offer-parts-discount.html"
+  },
+  "primaryButton": {
+    "text": "Назад к предложениям",
+    "href": "../index.html#offers"
+  },
+  "secondaryButton": {
+    "text": "Уточнить наличие",
+    "href": "../index.html#clients"
+  }
+}

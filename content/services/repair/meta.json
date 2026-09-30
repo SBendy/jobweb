@@ -1,0 +1,17 @@
+{
+  "pageTitle": "Ремонт | CapService",
+  "label": "Услуги",
+  "title": "Ремонт",
+  "description": "Качественный ремонт всех систем автомобиля",
+  "body": "Ремонт двигателя, ходовой части, тормозной системы, рулевого управления и климат-контроля. Прозрачная смета, согласование объёма работ и сроков до начала ремонта, гарантия на выполненные работы.",
+  "image": "assets/cover.png",
+  "detailPage": "pages/service-repair.html",
+  "primaryButton": {
+    "text": "Назад к услугам",
+    "href": "../index.html#services"
+  },
+  "secondaryButton": {
+    "text": "Контакты",
+    "href": "../index.html#clients"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "pageTitle": "Бесплатная диагностика | CapService",
+  "label": "Специальное предложение",
+  "title": "Бесплатная диагностика",
+  "body": "Редактируйте условия акции: минимальная сумма ремонта, какие системы проверяем, срок действия предложения. Фото — в assets/.",
+  "image": "assets/cover.png",
+  "homeCard": {
+    "date": "до 31 января 2026",
+    "title": "Бесплатная диагностика",
+    "description": "При ремонте от 10 000 рублей",
+    "image": "assets/cover.png",
+    "detailPage": "pages/offer-free-diagnostics.html"
+  },
+  "primaryButton": {
+    "text": "Назад к предложениям",
+    "href": "../index.html#offers"
+  },
+  "secondaryButton": {
+    "text": "Оставить заявку",
+    "href": "../index.html#clients"
+  }
+}
