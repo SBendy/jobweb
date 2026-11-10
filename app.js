@@ -14,6 +14,38 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Compact navigation on phones.
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+const mobileNavigation = window.matchMedia('(max-width: 768px)');
+
+function setMobileMenu(open) {
+    header.classList.toggle('menu-open', open);
+    if (menuToggle) {
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    }
+}
+
+if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+        setMobileMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+    mainNav.addEventListener('click', (event) => {
+        if (event.target.closest('a')) setMobileMenu(false);
+    });
+    document.addEventListener('click', (event) => {
+        if (!header.contains(event.target)) setMobileMenu(false);
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && header.classList.contains('menu-open')) {
+            setMobileMenu(false);
+            menuToggle.focus();
+        }
+    });
+    mobileNavigation.addEventListener('change', () => setMobileMenu(false));
+}
+
 // Contacts Modal
 const contactsBtn = document.getElementById('contactsBtn');
 const contactsModal = document.getElementById('contactsModal');
@@ -50,23 +82,36 @@ if (modalClose && contactsModal) {
     });
 }
 
-// Scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
+// Reveal each block once, when it enters the viewport.
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const mobileRevealElements = document.querySelectorAll(
+    '.section-title, .section-subtitle, .contact-card, .contacts-actions, ' +
+    '.contacts-map-panel, .warranty-content, .warranty-image, .footer-logo, ' +
+    '.footer-column, .footer-social, .footer-bottom'
+);
+mobileRevealElements.forEach((element) => {
+    element.classList.add('mobile-reveal');
+    const siblings = Array.from(element.parentElement.children);
+    element.style.setProperty('--reveal-delay', `${Math.min(siblings.indexOf(element), 2) * 60}ms`);
+});
+const revealElements = document.querySelectorAll('.fade-in, .mobile-reveal');
+let revealObserver;
+if ('IntersectionObserver' in window && !reducedMotion.matches) {
+    revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
             entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-// Observe all fade-in elements
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
+            revealObserver.unobserve(entry.target);
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+    revealElements.forEach((element) => revealObserver.observe(element));
+} else {
+    revealElements.forEach((element) => element.classList.add('visible'));
+}
+reducedMotion.addEventListener('change', (event) => {
+    if (!event.matches) return;
+    if (revealObserver) revealObserver.disconnect();
+    revealElements.forEach((element) => element.classList.add('visible'));
 });
 
 // News tabs
@@ -341,6 +386,7 @@ modelCards.forEach(card => {
 const offerCards = document.querySelectorAll('.offer-card');
 offerCards.forEach(card => {
     card.addEventListener('click', () => {
+        if (mobileNavigation.matches || reducedMotion.matches) return;
         card.style.transform = 'scale(0.98)';
         setTimeout(() => {
             card.style.transform = '';
@@ -352,6 +398,7 @@ offerCards.forEach(card => {
 const newsCards = document.querySelectorAll('.news-card');
 newsCards.forEach(card => {
     card.addEventListener('click', () => {
+        if (mobileNavigation.matches || reducedMotion.matches) return;
         card.style.transform = 'scale(0.98) translateY(-4px)';
         setTimeout(() => {
             card.style.transform = '';
@@ -436,13 +483,6 @@ images.forEach(img => {
 
 // Initialize animations on load
 window.addEventListener('load', () => {
-    // Trigger initial fade-in animations
-    document.querySelectorAll('.fade-in').forEach((el, index) => {
-        setTimeout(() => {
-            el.classList.add('visible');
-        }, index * 100);
-    });
-    
     // Animate hero elements
     const heroLabel = document.querySelector('.hero-label');
     const heroTitle = document.querySelector('.hero-title');

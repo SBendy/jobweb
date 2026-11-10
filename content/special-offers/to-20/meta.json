@@ -3,12 +3,12 @@
   "label": "Специальное предложение",
   "title": "Скидка 20% на сход-развал",
   "body": "Скидка 20% на сход-развал при проведении шиномонтажа. Предложение действует до 30.11.2026.",
-  "image": "assets/cover.png",
+  "image": "assets/cover.jpg",
   "homeCard": {
     "date": "до 30.11.2026",
     "title": "Скидка 20% на сход-развал",
     "description": "При проведении шиномонтажа",
-    "image": "assets/cover.png",
+    "image": "assets/cover.jpg",
     "detailPage": "pages/offer-to-20.html"
   },
   "primaryButton": {

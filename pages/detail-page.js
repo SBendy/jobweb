@@ -18,7 +18,7 @@
         return new URL(image, baseDir).href;
     }
 
-    fetch(metaUrl.href)
+    fetch(metaUrl.href, { cache: 'no-cache' })
         .then((r) => (r.ok ? r.json() : Promise.reject(new Error('meta'))))
         .then((meta) => {
             if (meta.pageTitle) document.title = meta.pageTitle;

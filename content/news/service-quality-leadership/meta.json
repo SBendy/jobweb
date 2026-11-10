@@ -4,11 +4,11 @@
   "title": "Мы открылись!",
   "date": "20.10.2026",
   "body": "Мы открылись! С 20 октября 2026 года ждём вас в CapService по адресу: д. Котляково, 34Ж/2. Сход-развал, шиномонтаж, слесарные и кузовные работы любой сложности. Запись и консультация: +7 (903) 120-09-07.",
-  "image": "assets/cover.png",
+  "image": "assets/cover.jpg",
   "homeCard": {
     "date": "20.10.2026",
     "title": "Мы открылись!",
-    "image": "assets/cover.png",
+    "image": "assets/cover.jpg",
     "detailPage": "pages/news-service-quality-leadership.html"
   },
   "primaryButton": {

@@ -4,7 +4,7 @@
   "title": "Шиномонтаж",
   "description": "Шиномонтаж и балансировка колёс",
   "body": "Выполняем шиномонтаж и балансировку колёс. Для записи и консультации свяжитесь с нами по телефону +7 (903) 120-09-07.",
-  "image": "assets/cover.png",
+  "image": "assets/cover.jpg",
   "detailPage": "pages/service-diagnostics.html",
   "primaryButton": {
     "text": "Назад к услугам",

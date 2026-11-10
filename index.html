@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CapService - Автосервис премиум класса</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261110-motion">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +17,10 @@
                 <a class="logo brand-mark" href="index.html" aria-label="CapService — главная">
                     <img class="brand-image" src="content/brand/assets/logo.png" alt="CapService" width="1220" height="843" loading="eager" fetchpriority="high" decoding="async">
                 </a>
-                <nav class="nav">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="nav" id="mainNav" aria-label="Основная навигация">
                     <a href="#services" class="nav-link">Услуги</a>
                     <a href="#clients" class="nav-link">Клиентам</a>
                     <a href="#offers" class="nav-link">Спецпредложения</a>
@@ -30,7 +33,7 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-background-image">
-            <img src="content/hero/assets/1.jpg" alt="CapService - Профессионалы работают над автомобилем" class="hero-bg-img">
+            <img src="content/hero/assets/1-optimized.jpg" alt="CapService - Профессионалы работают над автомобилем" class="hero-bg-img" loading="eager" fetchpriority="high" decoding="async">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content-new">
@@ -50,7 +53,7 @@
             <div class="offers-grid">
                 <div class="offer-card fade-in" data-catalog="service" data-catalog-slug="maintenance" data-detail-url="pages/service-maintenance.html" role="link" tabindex="0">
                     <div class="offer-image">
-                        <img src="content/services/maintenance/assets/cover.png" alt="Сход-развал" class="offer-img" loading="lazy">
+                        <img src="content/services/maintenance/assets/cover.jpg" alt="Сход-развал" class="offer-img" loading="lazy">
                     </div>
                     <div class="offer-content">
                         <h3 class="offer-title">Сход-развал</h3>
@@ -59,7 +62,7 @@
                 </div>
                 <div class="offer-card fade-in" data-catalog="service" data-catalog-slug="diagnostics" data-detail-url="pages/service-diagnostics.html" role="link" tabindex="0">
                     <div class="offer-image">
-                        <img src="content/services/diagnostics/assets/cover.png" alt="Шиномонтаж" class="offer-img" loading="lazy">
+                        <img src="content/services/diagnostics/assets/cover.jpg" alt="Шиномонтаж" class="offer-img" loading="lazy">
                     </div>
                     <div class="offer-content">
                         <h3 class="offer-title">Шиномонтаж</h3>
@@ -68,7 +71,7 @@
                 </div>
                 <div class="offer-card fade-in" data-catalog="service" data-catalog-slug="repair" data-detail-url="pages/service-repair.html" role="link" tabindex="0">
                     <div class="offer-image">
-                        <img src="content/services/repair/assets/cover.png" alt="Слесарные и кузовные работы любой сложности" class="offer-img" loading="lazy">
+                        <img src="content/services/repair/assets/cover.jpg" alt="Слесарные и кузовные работы любой сложности" class="offer-img" loading="lazy">
                     </div>
                     <div class="offer-content">
                         <h3 class="offer-title">Слесарные и кузовные работы любой сложности</h3>
@@ -86,7 +89,7 @@
             <div class="offers-grid">
                 <div class="offer-card fade-in" data-catalog="special-offer" data-catalog-slug="to-20" data-detail-url="pages/offer-to-20.html" role="link" tabindex="0">
                     <div class="offer-image">
-                        <img src="content/special-offers/to-20/assets/cover.png" alt="Специальное предложение" class="offer-img" loading="lazy">
+                        <img src="content/special-offers/to-20/assets/cover.jpg" alt="Специальное предложение" class="offer-img" loading="lazy">
                     </div>
                     <div class="offer-content">
                         <p class="offer-date">до 30.11.2026</p>
@@ -178,7 +181,7 @@
                     <a href="pages/warranty.html" class="btn btn-primary">Подробнее</a>
                 </div>
                 <div class="warranty-image">
-                    <img src="content/warranty/assets/cover.png" alt="Гарантия и сервис" class="warranty-img" loading="lazy">
+                    <img src="content/warranty/assets/cover.jpg" alt="Гарантия и сервис" class="warranty-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -191,7 +194,7 @@
             <div class="news-grid" id="newsGrid">
                 <div class="news-card fade-in" data-catalog="news" data-catalog-slug="service-quality-leadership" data-detail-url="pages/news-service-quality-leadership.html" role="link" tabindex="0">
                     <div class="news-image">
-                        <img src="content/news/service-quality-leadership/assets/cover.png" alt="Открытие автосервиса CapService" class="news-img" loading="lazy">
+                        <img src="content/news/service-quality-leadership/assets/cover.jpg" alt="Открытие автосервиса CapService" class="news-img" loading="lazy">
                         <div class="news-overlay"><span class="news-more">Подробнее</span></div>
                     </div>
                     <div class="news-content">
@@ -253,7 +256,7 @@
         <h3 class="promo-title">Скидка 20% на сход-развал при проведении шиномонтажа</h3>
         <p class="promo-date">до 30.11.2026</p>
         <div class="promo-image">
-            <img src="content/promo/assets/cover.png" alt="Специальные предложения" class="promo-img" loading="lazy">
+            <img src="content/promo/assets/cover.jpg" alt="Специальные предложения" class="promo-img" loading="lazy">
         </div>
         <button class="btn btn-primary btn-small" data-promo-detail data-detail-url="pages/offer-to-20.html">Подробнее</button>
     </div>
@@ -313,8 +316,8 @@
         </div>
     </div>
 
-    <script src="home-content.js"></script>
-    <script src="app.js"></script>
+    <script src="home-content.js?v=20261110-motion"></script>
+    <script src="app.js?v=20261110-motion"></script>
 </body>
 </html>
 
